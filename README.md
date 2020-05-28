@@ -28,6 +28,6 @@ date: '2020-05-28'
 <p>Plug the USB RS485 interface into a spare USB port and reboot the Pi. SSH back in and type</p>
 <pre><code>dmesg | grep tty
 </code></pre>
-<p>dmesg is a copy of the Pi’s boot log and grep does a search through it for anything that matches tty. This will give you the port number that your interface is attached to (look for ttyUSB0 or similar).</p>
+<p>dmesg displays a copy of the Pi’s boot log and grep does a search through it for anything that matches tty. This will give you the port number that your interface is attached to (look for ttyUSB0 or similar).</p>
 <p>If you look at the top of the <a href="http://sofar.py">sofar.py</a> file, you’ll see some import statements</p>
 
