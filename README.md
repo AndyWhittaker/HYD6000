@@ -17,4 +17,6 @@ date: '2020-05-28'
 <p>We now need a cheap USB to RS485 (which is a two wire interface) to allow us to connect to our Raspberry Pi. Note RS485 is completely different from RS232, do not attempt to use the wrong interface. log-on to eBay and search for RS422 interfaces and you will have one in your possession within a few days. If you would like to read up about the differences between RS232, RS422 and RS485, please have a short Google search for them. RS422 and RS485 are similar, just full-duplex verses half-duplex.</p>
 <p><img src="https://www.andywhittaker.com/img/RS485-Interface01.jpg" alt="RS485 Interface"></p>
 <p>Link the interface up with the inverter with a length of CAT5 pair of wire. Be sure to match-up the + and - connections on either end. In my case, TX- connects to D- and TX+ connects to D+.</p>
+<h2 id="setting-up-the-raspberry-pi">Setting up the Raspberry Pi</h2>
+<p>Plug the USB RS485 interface into a spare USB port and reboot the Pi. SSH back in and type</p>
 
