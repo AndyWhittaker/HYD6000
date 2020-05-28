@@ -30,5 +30,6 @@ date: '2020-05-28'
 <pre><code>dmesg | grep tty
 </code></pre>
 <p>dmesg displays a copy of the Pi’s boot log and grep does a search through it for anything that matches tty. This will give you the port number that your interface is attached to (look for ttyUSB0 or similar).</p>
-<p>Once you know the USB port name, you will have to update its name with the <a href="http://sofar.py">sofar.py</a> file.</p>
+<p>Once you know the USB port name, you will have to update its name with the <a href="http://sofar.py">sofar.py</a> file, look for<br>
+<code>instrument = minimalmodbus.Instrument('/dev/ttyUSB0', 1) # port name, slave address</code>.</p>
 
