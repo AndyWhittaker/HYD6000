@@ -25,6 +25,7 @@ date: '2020-05-28'
 </code></pre>
 <p>afterwards to ensure your Pi is up to date. While you are setting up, make sure you enable SSH access so that you don’t have to connect a monitor and keyboard while you set the whole thing up.</p>
 <p>For SSH access I love the <a href="https://www.bitvise.com/ssh-client-download">Bitvise SSH Client</a> because it not only allows you to bring up the remote bash console but it also enables you to exchange files with your PC. This is incredibly valuable when you are developing or setting up the Pi. It also allows you to copy to other UNIX devices as well.</p>
+<p>On the PC end, I think <a href="https://notepad-plus-plus.org/">NotePad++</a> is the editor to use at the moment.</p>
 <h3 id="usb-interface">USB Interface</h3>
 <p>Plug the USB RS485 interface into a spare USB port and reboot the Pi. SSH back in and type</p>
 <pre><code>dmesg | grep tty
