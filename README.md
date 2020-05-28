@@ -39,4 +39,6 @@ date: '2020-05-28'
 <pre><code>python sofar.py
 </code></pre>
 <p>If you get any errors, you are probably missing some python libraries which you will need to install using “pip”. Google is your friend here.</p>
+<h2 id="the-future">The Future</h2>
+<p>Everything we all do is never finished. I would like to get the script to write to my Domoticz server and, in future, instruct the inverter to charge up its batteries during cheap rate electricity.</p>
 
