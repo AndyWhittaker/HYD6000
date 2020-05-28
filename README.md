@@ -24,11 +24,11 @@ date: '2020-05-28'
 <pre><code>sudo apt update &amp;&amp; sudo apt full-update
 </code></pre>
 <p>afterwards to ensure your Pi is up to date. While you are setting up, make sure you enable SSH access so that you don’t have to connect a monitor and keyboard while you set the whole thing up.</p>
-<p>For SSH access I love the Bitvise SSH Client</p>
+<p>For SSH access I love the <a href="https://www.bitvise.com/ssh-client-download">Bitvise SSH Client</a> because it not only allows you to bring up the remote bash console but it also enables you to exchange files with your PC. This is incredibly valuable when you are developing or setting up the Pi. It also allows you to copy to other UNIX devices as well.</p>
 <h3 id="usb-interface">USB Interface</h3>
 <p>Plug the USB RS485 interface into a spare USB port and reboot the Pi. SSH back in and type</p>
 <pre><code>dmesg | grep tty
 </code></pre>
 <p>dmesg displays a copy of the Pi’s boot log and grep does a search through it for anything that matches tty. This will give you the port number that your interface is attached to (look for ttyUSB0 or similar).</p>
-<p>If you look at the top of the <a href="http://sofar.py">sofar.py</a> file, you’ll see some import statements</p>
+<p>Once you know the USB port name, you will have to update its name with the <a href="http://sofar.py">sofar.py</a> file.</p>
 
