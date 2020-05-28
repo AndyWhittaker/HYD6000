@@ -32,4 +32,10 @@ date: '2020-05-28'
 <p>dmesg displays a copy of the Pi’s boot log and grep does a search through it for anything that matches tty. This will give you the port number that your interface is attached to (look for ttyUSB0 or similar).</p>
 <p>Once you know the USB port name, you will have to update its name with the <a href="http://sofar.py">sofar.py</a> file, look for<br>
 <code>instrument = minimalmodbus.Instrument('/dev/ttyUSB0', 1) # port name, slave address</code>.</p>
+<p>For debugging, simply remove the comment lines (#) in front of the print statements.</p>
+<h2 id="executing-the-code">Executing the Code</h2>
+<p>Assuming you can see sofar,py when you type “ls”, then to run it type</p>
+<pre><code>python sofar.py
+</code></pre>
+<p>If you get any errors, you are probably missing some python libraries which you will need to install using “pip”. Google is your friend here.</p>
 
