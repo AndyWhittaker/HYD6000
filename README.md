@@ -43,8 +43,8 @@ date: '2020-05-28'
 </code></pre>
 <p>If you get any errors, you are probably missing some python libraries which you will need to install using “pip”. Google is your friend here.</p>
 <h2 id="node-red">Node-RED</h2>
-<p>If your script is working, you need a way of executing it every, say, 30 seconds to log to the emonCMS database to give you pretty graphs to bore your friends with.<br>
-<img src="http://andywhittaker.com/img/nodered.png" alt="Node-RED Timer Script"><br>
+<p>If your script is working, you need a way of executing it every, say, 30 seconds to log to the emonCMS database to give you pretty graphs to bore your friends with.</p>
+<p><img src="http://andywhittaker.com/img/nodered.png" alt="Node-RED Timer Script"><br>
 The node-RED setup actually took me the longest to complete. I was looking everywhere to find a solution and downloading libraries and all sorts. In the end it was quite easy.</p>
 <h1 id="the-future">The Future</h1>
 <p>Everything we all do is never finished. I would like to get the script to write to my Domoticz server and, in future, instruct the inverter to charge up its batteries during cheap rate electricity.</p>
