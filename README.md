@@ -15,4 +15,6 @@ date: '2020-05-28'
 <p><img src="https://www.andywhittaker.com/img/HYD6000-RS485-01.jpg" alt="Sofar HYD6000 Interfaces"></p>
 <p>The CAN/485m connection goes off to the batteries. However, the next interface available is the RS485s connection, Sofar even gives you the correct connector to plug-in (it looks to me like a Phoenix/ Weidmüller Type).</p>
 <p>We now need a cheap USB to RS485 (which is a two wire interface) to allow us to connect to our Raspberry Pi. Note RS485 is completely different from RS232, do not attempt to use the wrong interface. log-on to eBay and search for RS422 interfaces and you will have one in your possession within a few days. If you would like to read up about the differences between RS232, RS422 and RS485, please have a short Google search for them. RS422 and RS485 are similar, just full-duplex verses half-duplex.</p>
+<p><img src="https://www.andywhittaker.com/img/RS485-Interface01.jpg" alt="RS485 Interface"></p>
+<p>Link the interface up with the inverter with a length of CAT5 pair of wire. Be sure to match-up the + and - connections on either end.</p>
 
