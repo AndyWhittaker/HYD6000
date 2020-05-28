@@ -46,6 +46,7 @@ date: '2020-05-28'
 <p>If your script is working, you need a way of executing it every, say, 30 seconds to log to the emonCMS database to give you pretty graphs to bore your friends with.</p>
 <p><img src="http://andywhittaker.com/img/nodered.png" alt="Node-RED Timer Script"><br>
 The node-RED setup actually took me the longest to complete. I was looking everywhere to find a solution and downloading libraries and all sorts. In the end it was quite easy.</p>
+<p>If you would like the above flow, it’s available in the repository under flows.json.</p>
 <h1 id="the-future">The Future</h1>
 <p>Everything we all do is never finished. I would like to get the script to write to my Domoticz server and, in future, instruct the inverter to charge up its batteries during cheap rate electricity.</p>
 <p>Oh, did I mention batteries? I have adopted PylonTech US3000 units because they seem to be the best value units on the market (2020). Although this inverter will allow you to charge from your mains supply, this is actually frowned upon (i.e. illegal) here in the UK because every time you discharge the batteries, they are being metered as energy from your SolarPV panels. If you were to charge them from the mains during the night, you will probably be visited by some very angry men who will be in no mood for humour…</p>
