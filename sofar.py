@@ -52,13 +52,13 @@ PV_Generation_Pwr = instrument.read_register(0x215, 0, functioncode=3, signed=Fa
 EPS_Output_V = instrument.read_register(0x216, 0, functioncode=3, signed=False) / 10.0 # read EPS Output volts
 EPS_Output_Pwr = instrument.read_register(0x217, 0, functioncode=3, signed=False) * 10.0 # read EPS Output pwr
 
-TodayGenerated_KWh = instrument.read_register(0x218, 0, functioncode=3, signed=False) / 100.0 # read Today's generation kWh
-TodaySold_KWh = instrument.read_register(0x219, 0, functioncode=3, signed=False) / 100.0 # read Today's Generation sold kWh
-TodayBought_KWh = instrument.read_register(0x21a, 0, functioncode=3, signed=False) / 100.0 # read Today's Power bought kWh
-TodayConsumption_KWh = instrument.read_register(0x21b, 0, functioncode=3, signed=False) / 100.0 # read Today's consumption bought kWh
+TodayGeneratedSolar_Wh = instrument.read_register(0x218, 0, functioncode=3, signed=False) * 10.0 # read Today's generation Wh
+TodaySoldSolar_Wh = instrument.read_register(0x219, 0, functioncode=3, signed=False) * 10.0 # read Today's Generation sold Wh
+TodayBoughtGrid_Wh = instrument.read_register(0x21a, 0, functioncode=3, signed=False) * 10.0 # read Today's Power bought Wh
+TodayConsumption_Wh = instrument.read_register(0x21b, 0, functioncode=3, signed=False) * 10.0 # read Today's consumption bought Wh
 
-TotalLoadConsumption = instrument.read_register(0x222, 0, functioncode=3, signed=False) * 0xffff # Total Load Consumption kWh HighByte
-TotalLoadConsumption = TotalLoadConsumption + instrument.read_register(0x223, 0, functioncode=3, signed=False) # Total Load Consumption kWh LowByte
+TotalLoadConsumptionH = instrument.read_register(0x222, 0, functioncode=3, signed=False) * 0xffff # Total Load Consumption kWh HighByte
+TotalLoadConsumption = TotalLoadConsumptionH + instrument.read_register(0x223, 0, functioncode=3, signed=False) # Total Load Consumption kWh LowByte
 
 InverterInternalTemp = instrument.read_register(0x238, 0, functioncode=3, signed=False) # Inverter Internal Temperature
 InverterHeatsinkTemp = instrument.read_register(0x239, 0, functioncode=3, signed=False) # Inverter Heatsink Temperature
@@ -82,10 +82,10 @@ Internal_IO_PwrStr = str(Internal_IO_Pwr)
 PV_Generation_PwrStr = str(PV_Generation_Pwr)
 EPS_Output_VStr = str(EPS_Output_V)
 EPS_Output_PwrStr = str(EPS_Output_Pwr)
-TodayGenerated_KWhStr = str(TodayGenerated_KWh)
-TodaySold_KWhStr = str(TodaySold_KWh)
-TodayBought_KWhStr = str(TodayBought_KWh)
-TodayConsumption_KWhStr = str(TodayConsumption_KWh)
+TodayGenerated_WhStr = str(TodayGeneratedSolar_Wh)
+TodaySold_WhStr = str(TodaySoldSolar_Wh)
+TodayBought_WhStr = str(TodayBoughtGrid_Wh)
+TodayConsumption_WhStr = str(TodayConsumption_Wh)
 Battery_ChargeDischargePwrStr = str(Battery_ChargeDischargePwr)
 Battery_CyclesStr = str(Battery_Cycles)
 Battery_ChrgLevelStr = str(Battery_ChrgLevel)
@@ -99,10 +99,10 @@ Inverter_FreqStr = str(float("{:.1f}".format(Inverter_Freq)))
 #    print("Internal I/O Power " + Internal_IO_PwrStr + "W")
 #    print("EPS Output Volts " + EPS_Output_VStr + "V")
 #    print("EPS Output Power " + EPS_Output_PwrStr + "W")
-#    print("Today's Generation " + TodayGenerated_KWhStr + "kWh")
-#    print("Today's Sold " + TodaySold_KWhStr + "kWh")
-#    print("Today's Bought " + TodayBought_KWhStr + "kWh")
-#    print("Today's Consuption " + TodayConsumption_KWhStr + "kWh")
+#    print("Today's Generation " + TodayGenerated_WhStr + "Wh")
+#    print("Today's Sold " + TodaySold_WhStr + "Wh")
+#    print("Today's Bought " + TodayBought_WhStr + "Wh")
+#    print("Today's Consumption " + TodayConsumption_WhStr + "Wh")
     # print("All time Consumption " + str(TotalLoadConsumption) + "kW")
 
 #    print("Battery Charge/Discharge Power " + Battery_ChargeDischargePwrStr + "W")
@@ -110,7 +110,7 @@ Inverter_FreqStr = str(float("{:.1f}".format(Inverter_Freq)))
 #    print("Battery Charge Level " + Battery_ChrgLevelStr + "%")
 #    print("Inverter Internal Temp " + InverterInternalTempStr + "C")
 #    print("Inverter Heatsink Temp " + InverterHeatsinkTempStr + "C")
-print("Grid Frequency " + Inverter_FreqStr + "Hz")
+#   print("Grid Frequency " + Inverter_FreqStr + "Hz")
 
     ### STREAM RESULT TO EMONHUB ###
 from urlparse import urlparse
@@ -123,10 +123,10 @@ str3 = "\"Internal I/O Power\":" + Internal_IO_PwrStr + ","
 str4 = "\"SolarPV Generation\":" + PV_Generation_PwrStr + ","
 str5 = "\"EPS Output Volts\":" + EPS_Output_VStr + ","
 str6 = "\"EPS Output Power\":" + EPS_Output_PwrStr + ","
-str7 = "\"Today's Generation\":" + TodayGenerated_KWhStr + ","
-str8 = "\"Today's Sold\":" + TodaySold_KWhStr + ","
-str9 = "\"Today's Bought\":" + TodayBought_KWhStr + ","
-str10 = "\"Today's Consumption\":" + TodayConsumption_KWhStr + ","
+str7 = "\"Today's Generation\":" + TodayGenerated_WhStr + ","
+str8 = "\"Today's Sold\":" + TodaySold_WhStr + ","
+str9 = "\"Today's Bought\":" + TodayBought_WhStr + ","
+str10 = "\"Today's Consumption\":" + TodayConsumption_WhStr + ","
 str11 = "\"Battery Charge/Discharge Power\":" + Battery_ChargeDischargePwrStr + ","
 str12 = "\"Battery Cycles\":" + Battery_CyclesStr + ","
 str13 = "\"Battery Charge Level\":" + Battery_ChrgLevelStr + ","
