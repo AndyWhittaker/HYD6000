@@ -1,5 +1,5 @@
 ---
-title: Sofar-HYD6000-ES-ModbusRead
+title: Sofar HYD6000-ES ModbusRead
 author: Andy Whittaker
 tags: 'Modbus, Node-RED, Emon, RS422, Sofar Inverter, Hybrid, HYD6000-ES'
 categories: Solar PV
