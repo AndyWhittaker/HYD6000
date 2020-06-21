@@ -24,7 +24,7 @@ date: '2020-05-28'
 <h3 id="emonpi">EmonPi</h3>
 <p>The guys over at <a href="https://openenergymonitor.org/">openenergymonitor.org</a> have created a really easy guide to have your Raspberry Pi up and running with emoncms in no time. If you would like to use <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log#emonsd-17oct19-stable">emonpi</a> head along to their <a href="https://github.com/openenergymonitor/emonpi">GitHub repository</a> and follow the instructions.</p>
 <p>Don’t forget to do the usual</p>
-<pre><code>sudo apt update &amp;&amp; sudo apt full-update
+<pre><code>sudo apt update &amp;&amp; sudo apt full-upgrade
 </code></pre>
 <p>afterwards to ensure your Pi is up to date. While you are setting up, make sure you enable SSH access so that you don’t have to connect a monitor and keyboard while you set the whole thing up.</p>
 <p>For SSH access I love the <a href="https://www.bitvise.com/ssh-client-download">Bitvise SSH Client</a> because it not only allows you to bring up the remote bash console but it also enables you to exchange files with your PC. This is incredibly valuable when you are developing or setting up the Pi. It also allows you to copy to other UNIX devices as well.</p>
